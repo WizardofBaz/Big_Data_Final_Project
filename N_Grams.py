@@ -24,22 +24,3 @@ columns_to_keep = ['tokenized_text', 'ngrams', 'ngrams_frequency']  # Replace wi
 
 # Save selected columns to a new CSV file
 df[columns_to_keep].to_csv('Happy_N-Grams.csv', index=False)
-
-""" from wordcloud import WordCloud
-import matplotlib.pyplot as plt
-
-# Generate word cloud from n-gram frequencies
-ngrams_dict = dict(sum((Counter(item) for item in df['ngrams_frequency']), Counter()))
-
-sorted_ngrams = sorted(ngrams_dict.items(), key=lambda x: x[1], reverse=True)
-
-# Select the top 20 words
-top_20_ngrams = dict(sorted_ngrams[:20])
-wordcloud = WordCloud(width=800, height=400, background_color='white').generate_from_frequencies(top_20_ngrams)
-
-# Plot the word cloud
-plt.figure(figsize=(10, 5))
-plt.imshow(wordcloud, interpolation='bilinear')
-plt.axis('off')
-plt.savefig('ngram_wordcloud.png')
-plt.show() """
