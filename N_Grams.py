@@ -2,6 +2,10 @@ from nltk import ngrams, word_tokenize
 from collections import Counter
 import pandas as pd
 
+""" An n-gram is a collection of n successive items in a text document that may include words, numbers, symbols,
+and punctuation. N-gram models are useful in many text analytics applications where sequences of words are 
+relevant, such as in sentiment analysis, text classification, and text generation. """
+
 df = pd.read_csv('What_Made_You_Happy.csv')
 
 
